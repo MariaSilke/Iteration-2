@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<!-- a comment -->
+<!--
+<GridPane fx:id="grid" alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="sample.PatientController"
+        style="-fx-background-image:
+        url(https://media.gettyimages.com/photos/these-hands-will-take-care-of-you-picture-id855467380?s=2048x2048)">
+-->
+
+<GridPane fx:id="grid" alignment="center" hgap="10" prefHeight="500" style="-fx-background-image: url('file:/C:/Users/ja/IdeaProjects/Week8/src/Images/gettyimages-855467380-2048x2048.jpg')" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1" fx:controller="sample.PatientController">
+    <Label fx:id="cprLabel" text="CPR nummer" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <TextField fx:id="cprText" prefWidth="200" promptText="######-####" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+    <Label fx:id="labelFirstName" text="Fornavn" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="firstNameText" prefWidth="200" promptText="First Name" text="Fornavn" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <Label fx:id="labelLastName" text="Efternavn" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+    <TextField fx:id="lastNameText" prefWidth="400" promptText="Last Name" text="Efternavn" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+    <Label fx:id="labelPhone" text="Telefonnummer" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <TextField fx:id="phoneText" prefWidth="200" promptText="+### ########" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <TextArea fx:id="patientListTextArea" editable="false" prefHeight="190" prefWidth="830" text="Liste med registrerede patienter. " GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="5" GridPane.rowSpan="1">
+
+        <font>
+            <Font name="Courier New" size="11.0" />
+        </font>
+    </TextArea>
+    <Button fx:id="buttonAdd" onAction="#onAddPatient" text="Tilføj patient" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <Button fx:id="buttonClearAll" onAction="#onClearAll" text="Fjern alle" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+
+</GridPane>
