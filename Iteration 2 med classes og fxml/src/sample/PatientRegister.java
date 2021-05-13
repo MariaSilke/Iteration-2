@@ -49,18 +49,18 @@ public class PatientRegister {
         // Fill in code here
         String returnString;
         returnString="Number of patients: " + this.patients.size() +"\n\n";
-        returnString+="+-------------+--------------------------------+--------+-----+------------------+----------------------------------------+\n";
-        returnString+="| CPR-number  | Name                           | Gender | Age | Phone            | Email                                  |\n";
-        returnString+="+=============+================================+========+=====+==================+========================================+\n";
+        returnString+="+-------------+--------------------------------+--------+-----+-----------------------------------------------------------+\n";
+        returnString+="| CPR-number  | Name                           | Gender | Age | Phone                                                     |\n";
+        returnString+="+=============+================================+========+=====+===========================================================+\n";
 
         for (Patients p : this.patients) {
             String fullName = p.getFirstName()+" "+p.getLastName();
             //String newLine = String.format("CPR-number: %11s  Name: %-30s  Gender: %6s  Age: %3d  Phone: %16s  Email: %s\n",
             //        p.getCpr(),fullName,p.getGender(),p.getAge(),p.getPhoneNumber(),p.getEmail());
-            String newLine = String.format("| %11s | %-30s | %-6s | %3d | %-16s | %-38s |\n",
+            String newLine = String.format("| %11s | %-30s | %-6s | %3d | %-16s |\n",
                     p.getCPR(),fullName,p.getGender(),p.getAge(),p.getPhoneNumber());
             returnString += newLine;
-            returnString+="+-------------+--------------------------------+--------+-----+------------------+----------------------------------------+\n";
+            returnString+="+-------------+--------------------------------+--------+-----+----------------------------------------------------------+\n";
 
 
         }

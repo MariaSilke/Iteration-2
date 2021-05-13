@@ -17,13 +17,12 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {     // a Stage is the main window for a JavaFX application
         // initialize some test data
-
         root = FXMLLoader.load(getClass().getResource("Multiscene1.fxml"));
         gridPaneList.add(FXMLLoader.load(getClass().getResource("TilføjPatient.fxml")));
-        //gridPaneList.add(FXMLLoader.load(getClass().getResource("employees.fxml")));
+        gridPaneList.add(FXMLLoader.load(getClass().getResource("KonsulterPatient.fxml")));
 
         //root.getChildren().add(gridPanePatients);
-        primaryStage.setTitle("CoronaNet");
+        primaryStage.setTitle("CoronaNet - Sundhedsprofessionel");
         Scene scene = new Scene(root, 1200, 500); // create a scene window 1200 x 500 pixels
 
         primaryStage.setScene(scene);                   // add the scene to the stage / application window

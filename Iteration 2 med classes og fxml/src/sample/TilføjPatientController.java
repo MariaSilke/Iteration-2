@@ -11,7 +11,7 @@ import javafx.scene.text.Font;
 import java.time.LocalDate;
 
 public class TilføjPatientController {
-    public Label cprLabel;
+    public Label labelcpr;
     public TextField cprText;
     public Label labelFirstName;
     public TextField firstNameText;
@@ -68,8 +68,8 @@ public class TilføjPatientController {
 
     public void initialize() {
 
-        Patients p1 = new Patients("Very", "Ill", "+45 23232323", "010101-0101");
-        Patients p2 = new Patients("Top", "Fit", "+45 35353535", "020202-0202");
+        Patients p1 = new Patients("Villy", "Larsson", "+45 33546789", "010101-0101");
+        Patients p2 = new Patients("Carl", "Jensen", "+45 60776651", "020202-0202");
         p1.setPhoneNumber("+45 10203040");
 
         System.out.println(p1);

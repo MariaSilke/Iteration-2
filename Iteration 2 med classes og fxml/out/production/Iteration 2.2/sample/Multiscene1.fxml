@@ -1,55 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="1.7976931348623157E308" prefWidth="1200.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MultisceneController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
         <Menu mnemonicParsing="false" text="Patient">
           <items>
-            <MenuItem mnemonicParsing="false" text="Tilføj patient" />
-            <MenuItem mnemonicParsing="false" text="Patientkonsultation" />
-            <MenuItem mnemonicParsing="false" text="Luk" />
+            <MenuItem mnemonicParsing="false" onAction="#tilføjPatient" text="Tilføj patient" />
+            <MenuItem mnemonicParsing="false" onAction="#patientKonsultation" text="Patientkonsultation" />
+            <MenuItem mnemonicParsing="false" onAction="#Luk" text="Luk" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Min profil">
           <items>
-            <MenuItem mnemonicParsing="false" text="Skift adgangskode" />
-            <MenuItem mnemonicParsing="false" text="Vis profil" />
-            <MenuItem mnemonicParsing="false" text="Luk" />
+            <MenuItem mnemonicParsing="false" onAction="#skiftAdgangskode" text="Skift adgangskode" />
+            <MenuItem mnemonicParsing="false" onAction="#visProfil" text="Vis profil" />
+            <MenuItem mnemonicParsing="false" onMenuValidation="#Luk" text="Luk" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Statistik">
           <items>
-            <MenuItem mnemonicParsing="false" text="Smittekort" />
-                  <MenuItem mnemonicParsing="false" text="Smittetal" />
-                  <MenuItem mnemonicParsing="false" text="Luk" />
+            <MenuItem mnemonicParsing="false" onAction="#smitteKort" text="Smittekort" />
+                  <MenuItem mnemonicParsing="false" onAction="#smitteTal" text="Smittetal" />
+                  <MenuItem mnemonicParsing="false" onAction="#Luk" text="Luk" />
           </items>
         </Menu>
-            <Menu mnemonicParsing="false" text="Om CoronaNet">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Smittekort" />
-                  <MenuItem mnemonicParsing="false" text="Smittetal" />
-                  <MenuItem mnemonicParsing="false" text="Luk" />
-               </items>
-            </Menu>
+            <Menu mnemonicParsing="false" onAction="#omCoronaNet" text="Om CoronaNet" />
       </menus>
     </MenuBar>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
-      <children>
-        <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;" text="Drag components from Library here…" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
-          <font>
-            <Font size="18.0" />
-          </font>
-        </Label>
-      </children>
-    </AnchorPane>
+      <AnchorPane />
   </children>
 </VBox>

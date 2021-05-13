@@ -99,9 +99,4 @@ public class DataValidator {
     }
 
 
-    public boolean isValidAddress(String address) {
-        return false;
-    }
-
-
 }
